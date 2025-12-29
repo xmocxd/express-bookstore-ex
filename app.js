@@ -12,7 +12,7 @@
 
 // Also make sure to set ***process.env.NODE_ENV = “test”*** inside of your test file.
 
-
+require("dotenv").config();
 const express = require("express");
 const app = express();
 
@@ -41,6 +41,5 @@ app.use(function(err, req, res, next) {
     message: err.message
   });
 });
-
 
 module.exports = app;
